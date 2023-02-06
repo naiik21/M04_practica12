@@ -1,4 +1,8 @@
 import json as js
+
+"""
+Funcion que utilizamos para crear el archivo json y añadirle los valores de books
+"""
 def json():
     books= """
     {"book":[
@@ -31,10 +35,10 @@ def json():
     with open("jsonFile.json", "w") as file:
         js.dump(books,file)
 
+"""
+Funcion que utilizamos para imprimir los keys y values del archivo json
+"""
 def imprimir():
     with open("jsonFile.json", "r") as file1:
         result = js.load(file1)
         print(result)
-
-json()
-imprimir()
